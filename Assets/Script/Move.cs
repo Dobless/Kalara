@@ -5,6 +5,7 @@ public class Move : MonoBehaviour {
 
     public Camera MainCamera;
     float MoveSpeed;
+    float maxDis;
     public Turn turn;
     public GameObject tileParent;
     public GameObject[] tiles;
@@ -30,7 +31,7 @@ public class Move : MonoBehaviour {
 
         if (Input.GetMouseButton(0))
         {
-            pTurn = turn.iTurn;
+            pTurn = Turn.iTurn;
             ray = MainCamera.ScreenPointToRay(Input.mousePosition);
             Physics.Raycast(ray, out Hit, Mathf.Infinity);
 
@@ -70,20 +71,24 @@ public class Move : MonoBehaviour {
             {
                 if (Hit.collider.tag == "Field")
                 {
-                    Click = Hit.transform.gameObject.transform.position + new Vector3(0.0f, 1.44f, 0.0f);
-                    Vector3 test = Click - this.transform.position;
-                    this.transform.rotation = Quaternion.LookRotation(test);
-                    
-                    GetComponent<Renderer>().material.color = Color.white;
-                    bMove = true;
-                    Select = false;
+                    float distance = Vector3.Distance(this.transform.position, Hit.transform.position);
+                    if (distance <= maxDis)
+                    {
+                        GetComponent<Renderer>().material.color = Color.white;
+                        bMove = true;
+                        Select = false;
+                        Click = Hit.transform.gameObject.transform.position + new Vector3(0.0f, 1.44f, 0.0f);
+                        Vector3 test = Click - this.transform.position;
+                        this.transform.rotation = Quaternion.LookRotation(test);
+                    }
                 }
             }
         }
 
         if (bMove)
         {
-            //transform.Translate((Click - transform.position).normalized * MoveSpeed * Time.deltaTime);
+            
+            
             transform.position = Vector3.MoveTowards(transform.position, Click, MoveSpeed * Time.deltaTime);
             if (this.transform.position.x == Click.x && this.transform.position.z == Click.z)
             {
@@ -96,6 +101,7 @@ public class Move : MonoBehaviour {
     void Start ()
     {
         MoveSpeed = 3f;
+        maxDis = 5.4f;
         player = GameObject.FindWithTag("Player");
         field = GameObject.FindWithTag("Field");
         floor = GameObject.FindWithTag("Floor");
@@ -110,7 +116,7 @@ public class Move : MonoBehaviour {
         for (int i = 0; i < 70; i++)
         {
             tiles[i] = tileParent.gameObject.transform.GetChild(i).gameObject;
-            Debug.Log(tiles[i].name);
+            //Debug.Log(tiles[i].name);
         }
 
     }

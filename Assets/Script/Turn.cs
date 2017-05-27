@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Turn : MonoBehaviour
 {    
-    public int iTurn;
+    public static int iTurn;
 
     // Use this for initialization
     void Start ()
@@ -21,7 +21,16 @@ public class Turn : MonoBehaviour
     public void TurnButton()
     {
         if (iTurn == 0) iTurn = 1;
-        else if (iTurn == 1) iTurn = 0;
+        else if (iTurn == 1)
+        {
+            iTurn = 0;
+            Turn_score.score += 1;
+        }
         Debug.Log(iTurn);
+    }
+
+    public void TurnCheck()
+    {
+        iTurn = iTurn;
     }
 }
