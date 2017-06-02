@@ -1,9 +1,15 @@
 fileFormatVersion: 2
-guid: f77800614d239874f84e034fef480b8b
-timeCreated: 1491034358
+guid: 95ca5a9065c50cf43ae7b2b3177f611e
+timeCreated: 1495810412
 licenseType: Free
 ShaderImporter:
-  defaultTextures: []
+  defaultTextures:
+  - _Ripplemap: {fileID: 2800000, guid: 712bb094e721eb14da7b180e03d991bf, type: 3}
+  - _SecondaryBlendmask: {fileID: 2800000, guid: 35d28563517a3434f9e98b3a2e1afb56,
+      type: 3}
+  - _ThirdTex: {fileID: 2800000, guid: 7dba098ef42fa5644ba45514eaa3266d, type: 3}
+  - _Noisetex: {fileID: 2800000, guid: 28c7aad1372ff114b90d330f8a2dd938, type: 3}
+  - _Thirdmetallic: {fileID: 2800000, guid: 0dc64d9a1af9550448c1beddca2308ad, type: 3}
   userData: 
   assetBundleName: 
   assetBundleVariant: 

@@ -20,17 +20,19 @@ public class Turn : MonoBehaviour
 
     public void TurnButton()
     {
+        
         if (iTurn == 0) iTurn = 1;
         else if (iTurn == 1)
         {
             iTurn = 0;
             Turn_score.score += 1;
         }
-        Debug.Log(iTurn);
+        
     }
 
     public void TurnCheck()
     {
+        Debug.Log(iTurn);
         iTurn = iTurn;
     }
 }

@@ -7,8 +7,6 @@ public class Move : MonoBehaviour {
     float MoveSpeed;
     float maxDis;
     public Turn turn;
-    public GameObject tileParent;
-    public GameObject[] tiles;
     public GameObject place;
 
     Vector3 Click;
@@ -101,7 +99,7 @@ public class Move : MonoBehaviour {
     void Start ()
     {
         MoveSpeed = 3f;
-        maxDis = 5.4f;
+        maxDis = 5.6f;
         player = GameObject.FindWithTag("Player");
         field = GameObject.FindWithTag("Field");
         floor = GameObject.FindWithTag("Floor");
@@ -110,15 +108,6 @@ public class Move : MonoBehaviour {
         next_turn = GameObject.FindWithTag("Next_turn");
 
         turn = GameObject.FindWithTag("Next_turn").GetComponent<Turn>();
-
-        tileParent = GameObject.FindWithTag("Finish");
-        tiles = new GameObject[70];
-        for (int i = 0; i < 70; i++)
-        {
-            tiles[i] = tileParent.gameObject.transform.GetChild(i).gameObject;
-            //Debug.Log(tiles[i].name);
-        }
-
     }
 
     // Update is called once per frame

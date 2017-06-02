@@ -1,11 +1,9 @@
-// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
-
 // Upgrade NOTE: replaced '_Object2World' with 'unity_ObjectToWorld'
 
 // Shader created with Shader Forge v1.36 
 // Shader Forge (c) Neat Corporation / Joachim Holmer - http://www.acegikmo.com/shaderforge/
 // Note: Manually altering this data may prevent you from opening it in Shader Forge
-/*SF_DATA;ver:1.36;sub:START;pass:START;ps:flbk:,iptp:0,cusa:False,bamd:0,cgin:,lico:1,lgpr:1,limd:3,spmd:1,trmd:0,grmd:0,uamb:True,mssp:True,bkdf:True,hqlp:False,rprd:True,enco:False,rmgx:True,imps:True,rpth:1,vtps:0,hqsc:True,nrmq:1,nrsp:0,vomd:0,spxs:False,tesm:0,olmd:1,culm:0,bsrc:0,bdst:1,dpts:2,wrdp:True,dith:0,atcv:False,rfrpo:True,rfrpn:Refraction,coma:15,ufog:True,aust:True,igpj:False,qofs:0,qpre:1,rntp:1,fgom:False,fgoc:False,fgod:False,fgor:False,fgmd:0,fgcr:0.5,fgcg:0.5,fgcb:0.5,fgca:1,fgde:0.01,fgrn:0,fgrf:300,stcl:False,stva:128,stmr:255,stmw:255,stcp:6,stps:0,stfa:0,stfz:0,ofsf:0,ofsu:0,f2p0:False,fnsp:False,fnfb:False,fsmp:False;n:type:ShaderForge.SFN_Final,id:2865,x:32719,y:32712,varname:node_2865,prsc:2|diff-6343-OUT,spec-1229-R,gloss-1229-G,normal-5964-RGB,voffset-1835-OUT;n:type:ShaderForge.SFN_Multiply,id:6343,x:32114,y:32712,varname:node_6343,prsc:2|A-7736-RGB,B-6665-RGB;n:type:ShaderForge.SFN_Color,id:6665,x:31921,y:32805,ptovrint:False,ptlb:Color,ptin:_Color,varname:_Color,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,c1:0.5019608,c2:0.5019608,c3:0.5019608,c4:1;n:type:ShaderForge.SFN_Tex2d,id:7736,x:31921,y:32575,ptovrint:True,ptlb:Base Color,ptin:_MainTex,varname:_MainTex,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,ntxv:0,isnm:False;n:type:ShaderForge.SFN_Tex2d,id:5964,x:32114,y:33093,ptovrint:True,ptlb:Normal Map,ptin:_BumpMap,varname:_BumpMap,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,ntxv:3,isnm:True;n:type:ShaderForge.SFN_Tex2d,id:1229,x:32114,y:32864,ptovrint:False,ptlb:MetallicTex,ptin:_MetallicTex,varname:_MetallicTex,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,ntxv:0,isnm:False;n:type:ShaderForge.SFN_Tex2d,id:3527,x:31168,y:33340,varname:_WindTex1,prsc:2,ntxv:0,isnm:False|UVIN-8992-UVOUT,TEX-914-TEX;n:type:ShaderForge.SFN_Panner,id:8992,x:30999,y:33340,varname:node_8992,prsc:2,spu:1.5,spv:0.4|UVIN-7645-OUT;n:type:ShaderForge.SFN_TexCoord,id:8177,x:30721,y:33452,varname:node_8177,prsc:2,uv:0,uaff:False;n:type:ShaderForge.SFN_NormalVector,id:2211,x:31397,y:33235,prsc:2,pt:False;n:type:ShaderForge.SFN_Multiply,id:1835,x:31998,y:33392,varname:node_1835,prsc:2|A-1124-OUT,B-2211-OUT,C-8177-V;n:type:ShaderForge.SFN_Slider,id:3907,x:31001,y:33943,ptovrint:False,ptlb:Grass anim,ptin:_Grassanim,varname:_Grassanim,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,min:0,cur:0.3383705,max:1;n:type:ShaderForge.SFN_Multiply,id:1124,x:31781,y:33508,varname:node_1124,prsc:2|A-4638-OUT,B-3907-OUT;n:type:ShaderForge.SFN_Multiply,id:4529,x:31446,y:33794,varname:node_4529,prsc:2|A-4638-OUT,B-1987-OUT;n:type:ShaderForge.SFN_Vector1,id:1987,x:31179,y:33776,varname:node_1987,prsc:2,v1:0.6;n:type:ShaderForge.SFN_Add,id:9872,x:31594,y:33508,varname:node_9872,prsc:2|A-4529-OUT,B-1987-OUT;n:type:ShaderForge.SFN_Tex2dAsset,id:914,x:30875,y:33049,ptovrint:False,ptlb:WindTex,ptin:_WindTex,varname:_WindTex,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,ntxv:0,isnm:False;n:type:ShaderForge.SFN_Tex2d,id:3673,x:31179,y:33544,varname:_WindTex2,prsc:2,ntxv:0,isnm:False|UVIN-583-UVOUT,TEX-914-TEX;n:type:ShaderForge.SFN_Panner,id:583,x:30999,y:33544,varname:node_583,prsc:2,spu:0.2,spv:0.6|UVIN-7645-OUT;n:type:ShaderForge.SFN_Add,id:4638,x:31408,y:33621,varname:node_4638,prsc:2|A-3527-R,B-3673-R;n:type:ShaderForge.SFN_FragmentPosition,id:2686,x:30523,y:33214,varname:node_2686,prsc:2;n:type:ShaderForge.SFN_ComponentMask,id:7645,x:30721,y:33256,varname:node_7645,prsc:2,cc1:0,cc2:2,cc3:-1,cc4:-1|IN-2686-XYZ;proporder:7736-6665-1229-5964-3907-914;pass:END;sub:END;*/
+/*SF_DATA;ver:1.36;sub:START;pass:START;ps:flbk:,iptp:0,cusa:False,bamd:0,cgin:,lico:1,lgpr:1,limd:3,spmd:1,trmd:0,grmd:0,uamb:True,mssp:True,bkdf:True,hqlp:False,rprd:True,enco:False,rmgx:True,imps:True,rpth:1,vtps:0,hqsc:True,nrmq:1,nrsp:0,vomd:0,spxs:False,tesm:0,olmd:1,culm:0,bsrc:0,bdst:1,dpts:2,wrdp:True,dith:0,atcv:False,rfrpo:True,rfrpn:Refraction,coma:15,ufog:True,aust:True,igpj:False,qofs:0,qpre:1,rntp:1,fgom:False,fgoc:False,fgod:False,fgor:False,fgmd:0,fgcr:0.5,fgcg:0.5,fgcb:0.5,fgca:1,fgde:0.01,fgrn:0,fgrf:300,stcl:False,stva:128,stmr:255,stmw:255,stcp:6,stps:0,stfa:0,stfz:0,ofsf:0,ofsu:0,f2p0:False,fnsp:False,fnfb:False,fsmp:False;n:type:ShaderForge.SFN_Final,id:2865,x:32719,y:32712,varname:node_2865,prsc:2|diff-6343-OUT,spec-1229-R,gloss-1229-G,normal-5964-RGB,voffset-1835-OUT;n:type:ShaderForge.SFN_Multiply,id:6343,x:32114,y:32712,varname:node_6343,prsc:2|A-7736-RGB,B-6665-RGB;n:type:ShaderForge.SFN_Color,id:6665,x:31921,y:32805,ptovrint:False,ptlb:Color,ptin:_Color,varname:_Color,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,c1:0.5019608,c2:0.5019608,c3:0.5019608,c4:1;n:type:ShaderForge.SFN_Tex2d,id:7736,x:31921,y:32575,ptovrint:True,ptlb:Base Color,ptin:_MainTex,varname:_MainTex,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,ntxv:0,isnm:False;n:type:ShaderForge.SFN_Tex2d,id:5964,x:32114,y:33093,ptovrint:True,ptlb:Normal Map,ptin:_BumpMap,varname:_BumpMap,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,ntxv:3,isnm:True;n:type:ShaderForge.SFN_Tex2d,id:1229,x:32114,y:32864,ptovrint:False,ptlb:MetallicTex,ptin:_MetallicTex,varname:_MetallicTex,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,ntxv:0,isnm:False;n:type:ShaderForge.SFN_Tex2d,id:3527,x:31168,y:33340,varname:_WindTex1,prsc:2,ntxv:0,isnm:False|UVIN-8992-UVOUT,TEX-914-TEX;n:type:ShaderForge.SFN_Panner,id:8992,x:30999,y:33340,varname:node_8992,prsc:2,spu:1.5,spv:0.4|UVIN-7645-OUT;n:type:ShaderForge.SFN_TexCoord,id:8177,x:30721,y:33452,varname:node_8177,prsc:2,uv:0,uaff:False;n:type:ShaderForge.SFN_NormalVector,id:2211,x:31397,y:33235,prsc:2,pt:False;n:type:ShaderForge.SFN_Multiply,id:1835,x:32013,y:33433,varname:node_1835,prsc:2|A-1124-OUT,B-2211-OUT,C-8177-V;n:type:ShaderForge.SFN_Slider,id:3907,x:31001,y:33943,ptovrint:False,ptlb:Grass anim,ptin:_Grassanim,varname:_Grassanim,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,min:0,cur:0.3383705,max:1;n:type:ShaderForge.SFN_Multiply,id:1124,x:31781,y:33508,varname:node_1124,prsc:2|A-4638-OUT,B-3907-OUT;n:type:ShaderForge.SFN_Multiply,id:4529,x:31446,y:33794,varname:node_4529,prsc:2|A-4638-OUT,B-1987-OUT;n:type:ShaderForge.SFN_Vector1,id:1987,x:31179,y:33776,varname:node_1987,prsc:2,v1:0.6;n:type:ShaderForge.SFN_Add,id:9872,x:31594,y:33508,varname:node_9872,prsc:2|A-4529-OUT,B-1987-OUT;n:type:ShaderForge.SFN_Tex2dAsset,id:914,x:30875,y:33049,ptovrint:False,ptlb:WindTex,ptin:_WindTex,varname:_WindTex,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,ntxv:0,isnm:False;n:type:ShaderForge.SFN_Tex2d,id:3673,x:31179,y:33544,varname:_WindTex2,prsc:2,ntxv:0,isnm:False|UVIN-583-UVOUT,TEX-914-TEX;n:type:ShaderForge.SFN_Panner,id:583,x:30999,y:33544,varname:node_583,prsc:2,spu:0.2,spv:0.6|UVIN-7645-OUT;n:type:ShaderForge.SFN_Add,id:4638,x:31408,y:33621,varname:node_4638,prsc:2|A-3527-R,B-3673-R;n:type:ShaderForge.SFN_FragmentPosition,id:2686,x:30523,y:33214,varname:node_2686,prsc:2;n:type:ShaderForge.SFN_ComponentMask,id:7645,x:30721,y:33256,varname:node_7645,prsc:2,cc1:0,cc2:2,cc3:-1,cc4:-1|IN-2686-XYZ;proporder:7736-6665-1229-5964-3907-914;pass:END;sub:END;*/
 
 Shader "Team/BG_Grass" {
     Properties {
@@ -91,16 +89,16 @@ Shader "Team/BG_Grass" {
                 o.normalDir = UnityObjectToWorldNormal(v.normal);
                 o.tangentDir = normalize( mul( unity_ObjectToWorld, float4( v.tangent.xyz, 0.0 ) ).xyz );
                 o.bitangentDir = normalize(cross(o.normalDir, o.tangentDir) * v.tangent.w);
-                float4 node_9283 = _Time + _TimeEditor;
+                float4 node_8937 = _Time + _TimeEditor;
                 float2 node_7645 = mul(unity_ObjectToWorld, v.vertex).rgb.rb;
-                float2 node_8992 = (node_7645+node_9283.g*float2(1.5,0.4));
+                float2 node_8992 = (node_7645+node_8937.g*float2(1.5,0.4));
                 float4 _WindTex1 = tex2Dlod(_WindTex,float4(TRANSFORM_TEX(node_8992, _WindTex),0.0,0));
-                float2 node_583 = (node_7645+node_9283.g*float2(0.2,0.6));
+                float2 node_583 = (node_7645+node_8937.g*float2(0.2,0.6));
                 float4 _WindTex2 = tex2Dlod(_WindTex,float4(TRANSFORM_TEX(node_583, _WindTex),0.0,0));
                 float node_4638 = (_WindTex1.r+_WindTex2.r);
                 v.vertex.xyz += ((node_4638*_Grassanim)*v.normal*o.uv0.g);
                 o.posWorld = mul(unity_ObjectToWorld, v.vertex);
-                o.pos = UnityObjectToClipPos(v.vertex );
+                o.pos = mul(UNITY_MATRIX_MVP, v.vertex );
                 return o;
             }
             void frag(
@@ -255,17 +253,17 @@ Shader "Team/BG_Grass" {
                 o.normalDir = UnityObjectToWorldNormal(v.normal);
                 o.tangentDir = normalize( mul( unity_ObjectToWorld, float4( v.tangent.xyz, 0.0 ) ).xyz );
                 o.bitangentDir = normalize(cross(o.normalDir, o.tangentDir) * v.tangent.w);
-                float4 node_7804 = _Time + _TimeEditor;
+                float4 node_710 = _Time + _TimeEditor;
                 float2 node_7645 = mul(unity_ObjectToWorld, v.vertex).rgb.rb;
-                float2 node_8992 = (node_7645+node_7804.g*float2(1.5,0.4));
+                float2 node_8992 = (node_7645+node_710.g*float2(1.5,0.4));
                 float4 _WindTex1 = tex2Dlod(_WindTex,float4(TRANSFORM_TEX(node_8992, _WindTex),0.0,0));
-                float2 node_583 = (node_7645+node_7804.g*float2(0.2,0.6));
+                float2 node_583 = (node_7645+node_710.g*float2(0.2,0.6));
                 float4 _WindTex2 = tex2Dlod(_WindTex,float4(TRANSFORM_TEX(node_583, _WindTex),0.0,0));
                 float node_4638 = (_WindTex1.r+_WindTex2.r);
                 v.vertex.xyz += ((node_4638*_Grassanim)*v.normal*o.uv0.g);
                 o.posWorld = mul(unity_ObjectToWorld, v.vertex);
                 float3 lightColor = _LightColor0.rgb;
-                o.pos = UnityObjectToClipPos(v.vertex );
+                o.pos = mul(UNITY_MATRIX_MVP, v.vertex );
                 UNITY_TRANSFER_FOG(o,o.pos);
                 TRANSFER_VERTEX_TO_FRAGMENT(o)
                 return o;
@@ -445,17 +443,17 @@ Shader "Team/BG_Grass" {
                 o.normalDir = UnityObjectToWorldNormal(v.normal);
                 o.tangentDir = normalize( mul( unity_ObjectToWorld, float4( v.tangent.xyz, 0.0 ) ).xyz );
                 o.bitangentDir = normalize(cross(o.normalDir, o.tangentDir) * v.tangent.w);
-                float4 node_8618 = _Time + _TimeEditor;
+                float4 node_6544 = _Time + _TimeEditor;
                 float2 node_7645 = mul(unity_ObjectToWorld, v.vertex).rgb.rb;
-                float2 node_8992 = (node_7645+node_8618.g*float2(1.5,0.4));
+                float2 node_8992 = (node_7645+node_6544.g*float2(1.5,0.4));
                 float4 _WindTex1 = tex2Dlod(_WindTex,float4(TRANSFORM_TEX(node_8992, _WindTex),0.0,0));
-                float2 node_583 = (node_7645+node_8618.g*float2(0.2,0.6));
+                float2 node_583 = (node_7645+node_6544.g*float2(0.2,0.6));
                 float4 _WindTex2 = tex2Dlod(_WindTex,float4(TRANSFORM_TEX(node_583, _WindTex),0.0,0));
                 float node_4638 = (_WindTex1.r+_WindTex2.r);
                 v.vertex.xyz += ((node_4638*_Grassanim)*v.normal*o.uv0.g);
                 o.posWorld = mul(unity_ObjectToWorld, v.vertex);
                 float3 lightColor = _LightColor0.rgb;
-                o.pos = UnityObjectToClipPos(v.vertex );
+                o.pos = mul(UNITY_MATRIX_MVP, v.vertex );
                 UNITY_TRANSFER_FOG(o,o.pos);
                 TRANSFER_VERTEX_TO_FRAGMENT(o)
                 return o;
@@ -571,16 +569,16 @@ Shader "Team/BG_Grass" {
                 o.uv1 = v.texcoord1;
                 o.uv2 = v.texcoord2;
                 o.normalDir = UnityObjectToWorldNormal(v.normal);
-                float4 node_1528 = _Time + _TimeEditor;
+                float4 node_9357 = _Time + _TimeEditor;
                 float2 node_7645 = mul(unity_ObjectToWorld, v.vertex).rgb.rb;
-                float2 node_8992 = (node_7645+node_1528.g*float2(1.5,0.4));
+                float2 node_8992 = (node_7645+node_9357.g*float2(1.5,0.4));
                 float4 _WindTex1 = tex2Dlod(_WindTex,float4(TRANSFORM_TEX(node_8992, _WindTex),0.0,0));
-                float2 node_583 = (node_7645+node_1528.g*float2(0.2,0.6));
+                float2 node_583 = (node_7645+node_9357.g*float2(0.2,0.6));
                 float4 _WindTex2 = tex2Dlod(_WindTex,float4(TRANSFORM_TEX(node_583, _WindTex),0.0,0));
                 float node_4638 = (_WindTex1.r+_WindTex2.r);
                 v.vertex.xyz += ((node_4638*_Grassanim)*v.normal*o.uv0.g);
                 o.posWorld = mul(unity_ObjectToWorld, v.vertex);
-                o.pos = UnityObjectToClipPos(v.vertex );
+                o.pos = mul(UNITY_MATRIX_MVP, v.vertex );
                 TRANSFER_SHADOW_CASTER(o)
                 return o;
             }
@@ -645,11 +643,11 @@ Shader "Team/BG_Grass" {
                 o.uv1 = v.texcoord1;
                 o.uv2 = v.texcoord2;
                 o.normalDir = UnityObjectToWorldNormal(v.normal);
-                float4 node_4402 = _Time + _TimeEditor;
+                float4 node_5875 = _Time + _TimeEditor;
                 float2 node_7645 = mul(unity_ObjectToWorld, v.vertex).rgb.rb;
-                float2 node_8992 = (node_7645+node_4402.g*float2(1.5,0.4));
+                float2 node_8992 = (node_7645+node_5875.g*float2(1.5,0.4));
                 float4 _WindTex1 = tex2Dlod(_WindTex,float4(TRANSFORM_TEX(node_8992, _WindTex),0.0,0));
-                float2 node_583 = (node_7645+node_4402.g*float2(0.2,0.6));
+                float2 node_583 = (node_7645+node_5875.g*float2(0.2,0.6));
                 float4 _WindTex2 = tex2Dlod(_WindTex,float4(TRANSFORM_TEX(node_583, _WindTex),0.0,0));
                 float node_4638 = (_WindTex1.r+_WindTex2.r);
                 v.vertex.xyz += ((node_4638*_Grassanim)*v.normal*o.uv0.g);
