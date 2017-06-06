@@ -1,3 +1,5 @@
+// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
 // Upgrade NOTE: replaced '_Object2World' with 'unity_ObjectToWorld'
 
 // Shader created with Shader Forge v1.36 
@@ -90,7 +92,7 @@ Shader "Team/BG_WaterSphere" {
                 v.vertex.xyz += (mul( unity_ObjectToWorld, float4(_BumpMap_var.rgb,0) ).xyz.rgb*0.13);
                 o.posWorld = mul(unity_ObjectToWorld, v.vertex);
                 float3 lightColor = _LightColor0.rgb;
-                o.pos = mul(UNITY_MATRIX_MVP, v.vertex );
+                o.pos = UnityObjectToClipPos(v.vertex );
                 UNITY_TRANSFER_FOG(o,o.pos);
                 o.screenPos = o.pos;
                 return o;
@@ -280,7 +282,7 @@ Shader "Team/BG_WaterSphere" {
                 v.vertex.xyz += (mul( unity_ObjectToWorld, float4(_BumpMap_var.rgb,0) ).xyz.rgb*0.13);
                 o.posWorld = mul(unity_ObjectToWorld, v.vertex);
                 float3 lightColor = _LightColor0.rgb;
-                o.pos = mul(UNITY_MATRIX_MVP, v.vertex );
+                o.pos = UnityObjectToClipPos(v.vertex );
                 UNITY_TRANSFER_FOG(o,o.pos);
                 o.screenPos = o.pos;
                 TRANSFER_VERTEX_TO_FRAGMENT(o)
@@ -404,7 +406,7 @@ Shader "Team/BG_WaterSphere" {
                 float3 _BumpMap_var = UnpackNormal(tex2Dlod(_BumpMap,float4(TRANSFORM_TEX(node_7786, _BumpMap),0.0,0)));
                 v.vertex.xyz += (mul( unity_ObjectToWorld, float4(_BumpMap_var.rgb,0) ).xyz.rgb*0.13);
                 o.posWorld = mul(unity_ObjectToWorld, v.vertex);
-                o.pos = mul(UNITY_MATRIX_MVP, v.vertex );
+                o.pos = UnityObjectToClipPos(v.vertex );
                 TRANSFER_SHADOW_CASTER(o)
                 return o;
             }

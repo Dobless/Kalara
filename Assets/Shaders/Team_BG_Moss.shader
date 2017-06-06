@@ -1,3 +1,5 @@
+// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
 // Upgrade NOTE: replaced '_Object2World' with 'unity_ObjectToWorld'
 
 // Shader created with Shader Forge v1.36 
@@ -101,7 +103,7 @@ Shader "Team/BG_Moss" {
                 float node_4638 = (_WindTex1.r+_WindTex2.r);
                 v.vertex.xyz += ((node_4638*_Grassanim)*v.normal*o.uv0.g);
                 o.posWorld = mul(unity_ObjectToWorld, v.vertex);
-                o.pos = mul(UNITY_MATRIX_MVP, v.vertex );
+                o.pos = UnityObjectToClipPos(v.vertex );
                 return o;
             }
             void frag(
@@ -276,7 +278,7 @@ Shader "Team/BG_Moss" {
                 v.vertex.xyz += ((node_4638*_Grassanim)*v.normal*o.uv0.g);
                 o.posWorld = mul(unity_ObjectToWorld, v.vertex);
                 float3 lightColor = _LightColor0.rgb;
-                o.pos = mul(UNITY_MATRIX_MVP, v.vertex );
+                o.pos = UnityObjectToClipPos(v.vertex );
                 UNITY_TRANSFER_FOG(o,o.pos);
                 TRANSFER_VERTEX_TO_FRAGMENT(o)
                 return o;
@@ -475,7 +477,7 @@ Shader "Team/BG_Moss" {
                 v.vertex.xyz += ((node_4638*_Grassanim)*v.normal*o.uv0.g);
                 o.posWorld = mul(unity_ObjectToWorld, v.vertex);
                 float3 lightColor = _LightColor0.rgb;
-                o.pos = mul(UNITY_MATRIX_MVP, v.vertex );
+                o.pos = UnityObjectToClipPos(v.vertex );
                 UNITY_TRANSFER_FOG(o,o.pos);
                 TRANSFER_VERTEX_TO_FRAGMENT(o)
                 return o;
@@ -605,7 +607,7 @@ Shader "Team/BG_Moss" {
                 float node_4638 = (_WindTex1.r+_WindTex2.r);
                 v.vertex.xyz += ((node_4638*_Grassanim)*v.normal*o.uv0.g);
                 o.posWorld = mul(unity_ObjectToWorld, v.vertex);
-                o.pos = mul(UNITY_MATRIX_MVP, v.vertex );
+                o.pos = UnityObjectToClipPos(v.vertex );
                 TRANSFER_SHADOW_CASTER(o)
                 return o;
             }
