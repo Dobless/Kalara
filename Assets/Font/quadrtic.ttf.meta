@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 0c035a7e0bd856848be17f32e05416f9
+timeCreated: 1496978454
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Quadratic BRK
+  fontNames:
+  - Quadratic BRK
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

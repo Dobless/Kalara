@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: bc430e0b7665d3d418508b58e0b612f0
+timeCreated: 1496978454
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Diehl Deco
+  fontNames:
+  - Diehl Deco
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

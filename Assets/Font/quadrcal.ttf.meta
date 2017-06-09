@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: d9bc3b25a1bf0384b84ea27afdedff71
+timeCreated: 1496978454
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Quadratic Cal BRK
+  fontNames:
+  - Quadratic Cal BRK
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -60,8 +60,9 @@ public class Move : MonoBehaviour {
                 {
                     if (Hit.collider.gameObject == this.gameObject)
                     {
-                        Hit.collider.gameObject.GetComponent<Renderer>().material.color = Color.blue;
+                        //Hit.collider.gameObject.GetComponent<Renderer>().material.color = Color.blue;
                         select = true;
+                        Debug.Log(123123);
                     }
                 }
             }
@@ -111,7 +112,7 @@ public class Move : MonoBehaviour {
 
             if (x_diff < 0.01f && z_diff < 0.01f)
             {
-                Debug.Log(this.transform.position);
+                //Debug.Log(this.transform.position);
                 choose = true;
                 bMove = false;
             }
