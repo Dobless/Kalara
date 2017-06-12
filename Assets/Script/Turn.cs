@@ -9,7 +9,7 @@ public class Turn : MonoBehaviour
     // Use this for initialization
     void Start ()
     {
-        iTurn = 0;
+        if( iTurn == 0) iTurn = 0;
 	}
 	
 	// Update is called once per frame
@@ -20,14 +20,17 @@ public class Turn : MonoBehaviour
 
     public void TurnButton()
     {
-        
-        if (iTurn == 0) iTurn = 1;
+        if (iTurn == 0)
+        {
+            iTurn = 1;
+            Move.water_mana = 5;
+        } 
         else if (iTurn == 1)
         {
             iTurn = 0;
             Turn_score.score += 1;
+            Move.fire_mana = 5;
         }
-        
     }
 
     public void TurnCheck()

@@ -29,7 +29,7 @@ public class Exit_text : MonoBehaviour
     public void Exit_Game()
     {
         Debug.Log("Exit");
-        //Application.Quit();
+        Application.Quit();
     }
 
     // Update is called once per frame

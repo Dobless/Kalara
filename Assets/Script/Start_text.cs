@@ -16,7 +16,8 @@ public class Start_text : MonoBehaviour {
     }
 
 	void Start () {
-        
+        Move.water_mana = 5;
+        Move.fire_mana = 5;
 	}
     
 	// Update is called once per frame

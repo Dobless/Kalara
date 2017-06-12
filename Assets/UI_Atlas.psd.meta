@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 8bd3b795642deca4b91a0d301c390c3a
-timeCreated: 1495373895
+timeCreated: 1497135150
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -174,7 +174,7 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 106
-        width: 192
+        width: 191
         height: 106
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -198,9 +198,9 @@ TextureImporter:
       name: UI_Atlas_8
       rect:
         serializedVersion: 2
-        x: 361
+        x: 365
         y: 101
-        width: 909
+        width: 905
         height: 46
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -211,9 +211,9 @@ TextureImporter:
       name: UI_Atlas_9
       rect:
         serializedVersion: 2
-        x: 0
+        x: 1
         y: 1
-        width: 1921
+        width: 1920
         height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
