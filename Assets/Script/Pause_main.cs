@@ -19,7 +19,7 @@ public class Pause_main : MonoBehaviour
 
     public void _change()
     {
-        Turn.iTurn = 0;
+        Turn_score.score = 0;
         SceneManager.LoadScene("Field_Scene");
     }
 }

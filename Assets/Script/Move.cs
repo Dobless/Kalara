@@ -334,7 +334,7 @@ public class Move : MonoBehaviour {
             {
                 if (Hit.collider.tag == "Enemy")
                 {
-                    if (distance <= 2.0f)
+                    if (distance <= 2.4f)
                     {
 
                         Instantiate(bullet, bullet_position, Quaternion.identity);
@@ -359,7 +359,7 @@ public class Move : MonoBehaviour {
             {
                 if (Hit.collider.tag == "Player")
                 {
-                    if (distance <= 2.0f)
+                    if (distance <= 2.4f)
                     {
 
                         Instantiate(bullet, bullet_position, Quaternion.identity);
